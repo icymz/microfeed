@@ -8,3 +8,5 @@ database_id = "id_placeholder"
 [env.production]
 
 [env.preview]
+
+[env.microfeed]
