@@ -10,7 +10,9 @@
 </div>
 
 <h1 align="center">microfeed: a lightweight cms self-hosted on cloudflare</h1>
-
+  <div align="center">
+    中文文档：<a href="README_zh.md">中文
+  </div>
   <p align="center">
     <a href="https://github.com/microfeed/microfeed/issues/new?assignees=&labels=bug"><b>Report Bug</b></a>
     ·
