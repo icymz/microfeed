@@ -33,3 +33,33 @@ CREATE TABLE IF NOT EXISTS settings (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+-- D1 migration: create table & indexes for visit logs
+CREATE TABLE IF NOT EXISTS visit_logs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts INTEGER NOT NULL,                -- epoch milliseconds
+  method TEXT,
+  path TEXT,                          -- pathname + search (no domain)
+  query TEXT,                         -- search part, redundant but handy
+  referer_host TEXT,
+  referer_path TEXT,                  -- pathname + search (no domain)
+  ip TEXT,
+  country TEXT,
+  region TEXT,
+  city TEXT,
+  latitude REAL,
+  longitude REAL,
+  asn INTEGER,
+  as_org TEXT,
+  timezone TEXT,
+  ua TEXT,                            -- raw user-agent
+  ua_browser TEXT,                    -- parsed browser
+  ua_os TEXT,                         -- parsed os
+  accept_language TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_visit_logs_ts ON visit_logs (ts DESC);
+CREATE INDEX IF NOT EXISTS idx_visit_logs_path ON visit_logs (path);
+CREATE INDEX IF NOT EXISTS idx_visit_logs_country ON visit_logs (country);
+CREATE INDEX IF NOT EXISTS idx_visit_logs_ua_browser ON visit_logs (ua_browser);
