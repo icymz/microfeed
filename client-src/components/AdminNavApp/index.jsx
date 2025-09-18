@@ -106,6 +106,14 @@ export default class AdminNavApp extends React.Component {
               disabled={!onboardingResult.requiredOk}
             />
             <NavItem
+              url={ADMIN_URLS.visits()}
+              title={NAV_ITEMS_DICT[NAV_ITEMS.VISITS].name}
+              navId={NAV_ITEMS.VISITS}
+              currentId={currentPage}
+              Icon={ListBulletIcon}  // 已引入的图标可复用，或换一个你偏好的
+              disabled={!onboardingResult.requiredOk}
+            />
+            <NavItem
               url={ADMIN_URLS.settings()}
               title={NAV_ITEMS_DICT[NAV_ITEMS.SETTINGS].name}
               navId={NAV_ITEMS.SETTINGS}

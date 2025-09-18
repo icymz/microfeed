@@ -178,6 +178,7 @@ export const NAV_ITEMS = {
   NEW_ITEM: 'new_item',
   ALL_ITEMS: 'all_items',
   SETTINGS: 'settings',
+  VISITS: 'VISITS',
 };
 
 export const NAV_ITEMS_DICT = {
@@ -193,6 +194,9 @@ export const NAV_ITEMS_DICT = {
   [NAV_ITEMS.ALL_ITEMS]: {
     name: 'See all items',
   },
+   [NAV_ITEMS.VISITS]: { 
+    name: '访问日志' 
+  },  
   [NAV_ITEMS.SETTINGS]: {
     name: 'Settings',
   },

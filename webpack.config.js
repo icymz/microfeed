@@ -30,6 +30,7 @@ const entry = {
   edit_channel_js: './ClientAdminChannelApp/index.js',
   settings_js: './ClientAdminSettingsApp/index.js',
   custom_code_editor_js: './ClientAdminCustomCodeEditorApp/index.js',
+  visits_js: './ClientAdminVisitsApp/index.js',
 };
 
 

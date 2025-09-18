@@ -238,6 +238,8 @@ export const ADMIN_URLS = {
   newItem: (baseUrl = '/') => urlJoin(baseUrl, `${ADMIN_HOME}/items/new/`),
   allItems: () => `${ADMIN_HOME}/items/list/`,
   settings: () => `${ADMIN_HOME}/settings/`,
+  // 日志
+  visits: () => `${ADMIN_HOME}/visits/`,
   codeEditorSettings: () => `${ADMIN_HOME}/settings/code-editor/`,
   logout: () => '/cdn-cgi/access/logout',
 

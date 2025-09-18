@@ -1,6 +1,6 @@
 let schemaEnsured = false;
 
-export const onRequest = async (ctx) => {
+export const onRequest = async (ctx: any) => {
   const { request, env, next } = ctx;
   const url = new URL(request.url);
   const pathname = url.pathname;
@@ -47,7 +47,7 @@ export const onRequest = async (ctx) => {
     const timezone = cf.timezone || "";
 
     // 轻量 UA 解析
-    function parseUA(uaStr) {
+    function parseUA(uaStr: any) {
       let browser = "Other";
       let os = "Other";
       if (/Edg\//.test(uaStr)) browser = "Edge";
